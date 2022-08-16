@@ -1,0 +1,152 @@
+/* fonts */
+@font-face {
+    font-family: 'Outfit-Light';
+    src: url(/fonts/Outfit/static/Outfit-Light.ttf);
+}
+@font-face {
+    font-family: 'Outfit-Regular';
+    src: url(/fonts/Outfit/static/Outfit-Regular.ttf);
+}
+@font-face {
+    font-family: "Outfit-SemiBold";
+    src: url(/fonts/Outfit/static/Outfit-SemiBold.ttf);
+}
+
+:root {
+    --soft-blue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+    --mainBG: hsl(217, 54%, 11%);
+    --cardBG: hsl(216, 50%, 16%);
+    --line:  hsl(215, 32%, 27%);
+    --white: hsl(0, 0%, 100%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+.eth_img {
+    border-radius: 10px;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--mainBG);
+    color: white;
+}
+
+.container {
+    background-color: var(--cardBG);
+    width: 330px;
+    padding: 1.42em;
+    border-radius: 15px;
+
+}
+.images {
+    position: relative;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color:  hsl(178, 100%, 50%, 0.5);
+    opacity: 0;
+    border-radius: 10px;
+}
+.images:hover .overlay {
+    opacity: 0.9;
+}
+
+svg {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+h1 {
+    font-family: 'Outfit-Semibold';
+    font-size: 1.3rem;
+    margin-top: 1.2em;
+}
+h1:hover {
+    color: var(--cyan);
+}
+
+p.text1 {
+    font-family: 'Outfit-Light'; 
+    font-size: 1.1rem;
+    line-height: 1.5em;
+    margin-top: 0.9em;
+    color: var(--soft-blue);
+}
+.container2 {
+    display: flex;
+    margin-top: 1em;
+    justify-content: space-between;
+}
+.value1 {
+    background: url(images/icon-ethereum.svg) no-repeat;
+    color: var(--cyan);
+    font-family: 'Outfit-Semibold';
+    padding-left: 1em;
+}
+.value2{
+    background: url(images/icon-clock.svg) no-repeat;
+    color: var(--soft-blue);
+    padding-left: 1.25em;
+    font-family: 'Outfit-Regular';
+}
+hr {
+    border: none;
+    height: 1px;
+    background-color: var(--line);
+    margin-top: 1em;
+}
+.footer {
+    display: flex;
+    margin-top: 1em;
+}
+.avatar {
+    width: 35px;
+    border: solid 1px var(--white);
+    border-radius: 100%;
+}
+.text2 {
+    font-family: 'Outfit-Regular';
+    color: var(--soft-blue);
+    margin-top: 0.3em;
+    margin-left: 1em;
+
+}
+span {
+    font-family: 'Outfit-Regular';
+    color: var(--white);
+}
+span:hover {
+    color: var(--cyan);
+}
+
+@media (min-width: 375px) {
+
+    .container {
+        width: 88%;
+        max-width: 370px;
+        height: auto;
+    }
+    html {
+        font-size: 17px;
+    }
+   
+}
